@@ -20,6 +20,7 @@ body {
   padding: 20px;
   transition: background-color 0.3s ease;
   position: relative;
+  overflow-x: hidden; /* Přidáno, aby se skryl obsah, který vyjede zleva */
 }
 
 .complete {
@@ -41,7 +42,6 @@ form {
 }
 
 label {
-  display: block;
   font-weight: 700;
   margin-bottom: 15px;
 }
@@ -89,31 +89,19 @@ button:hover {
   position: relative;
   width: 100%;
   max-width: 480px;
-
-}
-
-.train-image {
   transition: transform 0.5s ease;
+  left: -10%; /* Přidáno, aby se obrázek vyjel zleva */
 }
 
 .container.complete .train-image {
   transform: translateX(-50%);
+  left: -60%; /* Přidáno, aby se část obrázku vyjela zleva */
 }
-
-/* Zbytek stylů zůstává stejný */
-
-
-/* Zbytek stylů zůstává stejný */
 
 header {
   padding-top: 20px;
   text-align: right;
-  display: flex;
-  justify-content: right;
-  flex-direction: column;
-  
 }
-
 
 h4 {
   font-size: 18px;
@@ -121,9 +109,7 @@ h4 {
   margin-top: 10px;
 }
 
-
 footer {
-  
   padding: 10px;
   text-align: right;
 }

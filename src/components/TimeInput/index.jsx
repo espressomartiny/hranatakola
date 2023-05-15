@@ -3,7 +3,7 @@ import React from "react";
 const TimeInput = ({ value, onChange }) => {
     return (
       <div>
-        Čas:<br />
+        Čas (HH:MM):<br />
         <input
           type="text"
           name="Time"

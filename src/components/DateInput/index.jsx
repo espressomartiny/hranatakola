@@ -3,7 +3,7 @@ import React from "react";
 const DateInput = ({ value, onChange }) => {
     return (
       <div>
-        Datum:<br />
+        Datum (DD.MM.RRRR):<br />
         <input
           type="text"
           name="Date"

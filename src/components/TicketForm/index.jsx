@@ -21,15 +21,15 @@ const TicketForm = ({ onReservationComplete, onAnimateTrain }) => {
   };
 
   useEffect(() => {
-    setIsTicketValid(values.TicketNumber === "0573");
+    setIsTicketValid(values.TicketNumber === "0000");
   }, [values.TicketNumber]);
 
   useEffect(() => {
-    setIsDateValid(values.Date === "22.09.2019");
+    setIsDateValid(values.Date === "26.09.2022");
   }, [values.Date]);
 
   useEffect(() => {
-    setIsTimeValid(values.Time === "21:11");
+    setIsTimeValid(values.Time === "12:00");
   }, [values.Time]);
 
   const handleChange = (e) => {
