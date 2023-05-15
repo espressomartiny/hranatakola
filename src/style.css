@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 26rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.logo {
+  width: 10rem;
+  height: 10rem;
+  background-image: url(./img/rocket.svg);
+  background-size: contain;
+}
+
+/* kola */
+
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #9cc2e5;
+}
+
+body.normal {
+	background-image: url("./img/pozadi.png");
+}
+
+body.OK {
+	background-image: url("./img/pozadi2.png");
+}
+
+.main {
+	margin : auto;
+	width: 50%;
+}
+
+div.hidden {
+  display: none;
+}
+
+div.visible {
+	text-align: center;
+	/* position: center; */
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* */
+
