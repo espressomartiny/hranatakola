@@ -10,6 +10,7 @@ const App = () => {
   const [isAnimatingTrain, setAnimatingTrain] = React.useState(false);
 
   const handleReservationComplete = () => {
+    fetch("http://localhost:8000/ok");
     setReservationComplete(true);
   };
 
