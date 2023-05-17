@@ -45,21 +45,34 @@ const TicketForm = ({ onReservationComplete, onAnimateTrain }) => {
     <div>
       {!isReserved && (
         <div>
-          <TicketNumberInput
-            value={values.TicketNumber}
-            onChange={handleChange}
-          />
-          {isTicketValid && (
-            <DateInput value={values.Date} onChange={handleChange} />
-          )}
-          {isDateValid && (
-            <TimeInput value={values.Time} onChange={handleChange} />
-          )}
-          {isTimeValid && (
-            <div>
-              <button className="btn-reservation" onClick={handleReservationComplete}>Přerezervovat</button>
-            </div>
-          )}
+          <form name="reservation-form" method="POST" data-netlify="true">
+            <TicketNumberInput
+              name="TicketNumber"
+              value={values.TicketNumber}
+              onChange={handleChange}
+            />
+            {isTicketValid && (
+              <DateInput
+                name="Date"
+                value={values.Date}
+                onChange={handleChange}
+              />
+            )}
+            {isDateValid && (
+              <TimeInput
+                name="Time"
+                value={values.Time}
+                onChange={handleChange}
+              />
+            )}
+            {isTimeValid && (
+              <div>
+                <button className="btn-reservation" onClick={handleReservationComplete}>
+                  Přerezervovat
+                </button>
+              </div>
+            )}
+          </form>
         </div>
       )}
       {isReserved && <Last animateTrain={isReserved} />}
