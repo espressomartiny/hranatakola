@@ -3,12 +3,13 @@ import Last from "../Last";
 import DateInput from "../DateInput";
 import TimeInput from "../TimeInput";
 import TicketNumberInput from "../TicketNumberInput";
+import validationData from "../../validationData";
 
 const TicketForm = ({ onReservationComplete, onAnimateTrain }) => {
   const [values, setValues] = useState({
     TicketNumber: "",
     Date: "",
-    Time: "",
+    Time: ""
   });
   const [isTicketValid, setIsTicketValid] = useState(false);
   const [isDateValid, setIsDateValid] = useState(false);
@@ -21,22 +22,22 @@ const TicketForm = ({ onReservationComplete, onAnimateTrain }) => {
   };
 
   useEffect(() => {
-    setIsTicketValid(values.TicketNumber === "0000");
+    setIsTicketValid(values.TicketNumber === validationData.ticketNumber);
   }, [values.TicketNumber]);
 
   useEffect(() => {
-    setIsDateValid(values.Date === "26.09.2022");
+    setIsDateValid(values.Date === validationData.date);
   }, [values.Date]);
 
   useEffect(() => {
-    setIsTimeValid(values.Time === "12:00");
+    setIsTimeValid(values.Time === validationData.time);
   }, [values.Time]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setValues((prevValues) => ({
       ...prevValues,
-      [name]: value,
+      [name]: value
     }));
   };
 
