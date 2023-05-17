@@ -45,7 +45,7 @@ const TicketForm = ({ onReservationComplete, onAnimateTrain }) => {
     <div>
       {!isReserved && (
         <div>
-          <form name="reservation-form" method="POST" data-netlify="true">
+          <form name="reservation-form" action="https://submit-form.com/va4tcaF8" method="POST">
             <TicketNumberInput
               name="TicketNumber"
               value={values.TicketNumber}
