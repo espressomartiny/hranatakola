@@ -38,9 +38,16 @@ module.exports = {
         test: /\.(png|jpe?g|svg|gif)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name]-[contenthash:6][ext]'
+          filename: 'img/[name]-[contenthash:6][ext]',
         },
-      }
+      },
+      {
+        test: /\.mp3$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'audio/[name]-[contenthash:6][ext]',
+        },
+      },
     ],
   },
   plugins: [

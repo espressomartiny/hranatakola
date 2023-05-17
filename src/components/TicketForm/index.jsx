@@ -4,6 +4,8 @@ import DateInput from "../DateInput";
 import TimeInput from "../TimeInput";
 import TicketNumberInput from "../TicketNumberInput";
 import validationData from "../../validationData";
+import trainsound from "../../audio/trainsound.mp3"
+
 
 const TicketForm = ({ onReservationComplete, onAnimateTrain }) => {
   const [values, setValues] = useState({
@@ -15,10 +17,18 @@ const TicketForm = ({ onReservationComplete, onAnimateTrain }) => {
   const [isDateValid, setIsDateValid] = useState(false);
   const [isTimeValid, setIsTimeValid] = useState(false);
   const [isReserved, setIsReserved] = useState(false);
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+
+  const handlePlayAudio = () => {
+    const audio = new Audio(trainsound);
+    audio.play();
+    setIsAudioPlaying(true);
+  };
 
   const handleReservationComplete = () => {
     onReservationComplete();
     onAnimateTrain();
+    handlePlayAudio();
   };
 
   useEffect(() => {
