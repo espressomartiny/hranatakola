@@ -45,7 +45,7 @@ const TicketForm = ({ onReservationComplete, onAnimateTrain }) => {
     <div>
       {!isReserved && (
         <div>
-          <form name="reservation-form" action="https://submit-form.com/va4tcaF8" method="POST">
+          <form name="reservation-form">
             <TicketNumberInput
               name="TicketNumber"
               value={values.TicketNumber}
